@@ -1,0 +1,60 @@
+{
+  "name": "@bitr/bitbankcc",
+  "version": "1.0.4",
+  "description": "R2 broker plugin for Bitbank.cc",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest --coverage --runInBand && cat ./coverage/lcov.info | coveralls",
+    "jest": "jest --runInBand",
+    "cov": "jest --coverage --runInBand"
+  },
+  "keywords": [
+    "typescript",
+    "R2"
+  ],
+  "repository": "https://github.com/bitrinjani/bitbankcc",
+  "author": "bitrinjani <bitrinjani@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@bitr/bitbankcc-api": "^1.0.2",
+    "@bitr/logger": "^1.0.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.4",
+    "@types/lodash": "^4.14.91",
+    "@types/node": "^8.0.46",
+    "coveralls": "^3.0.0",
+    "jest": "^21.0.3",
+    "nock": "^9.1.6",
+    "ts-jest": "^21.0.0",
+    "ts-node": "^3.0.0",
+    "tslint-config-airbnb": "^5.5.0",
+    "typescript": "^2.5.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.test\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/__tests__/**",
+      "!**/node_modules/**",
+      "!**/*.d.ts",
+      "!**/types.ts"
+    ]
+  }
+}
