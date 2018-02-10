@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@bitr/bitbankcc-api@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@bitr/bitbankcc-api/-/bitbankcc-api-1.0.2.tgz#59a8bc6ada3ba638ab44a6a578e19c61518c9027"
+"@bitr/bitbankcc-api@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@bitr/bitbankcc-api/-/bitbankcc-api-1.0.3.tgz#45b15a63b155b0e7a08ed278af8436f7cbee4e21"
   dependencies:
     "@bitr/castable" "^1.0.2"
     axios "^0.17.1"
