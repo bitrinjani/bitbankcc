@@ -79,7 +79,7 @@ export default class BrokerAdapterImpl implements BrokerAdapter {
 
   async cancel(order: Order): Promise<void> {
     const pair = this.mapSymbolToPair(order.symbol);
-    this.brokerApi.cancelOrder({ pair, order_id: Number(order.brokerOrderId) });
+    await this.brokerApi.cancelOrder({ pair, order_id: Number(order.brokerOrderId) });
     order.lastUpdated = new Date();
     order.status = OrderStatus.Canceled;
   }
